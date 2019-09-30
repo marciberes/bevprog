@@ -1,0 +1,48 @@
+#include "std_lib_facilities.h"
+
+
+int main(){
+cout<<"Please type in your first name."<<endl;
+string first_name;
+string friend_name;
+cin>>first_name;
+cout<<"Hello, "<<first_name<<endl;
+cout<<"Enter the name of the person you want to write to."<<endl;
+cin>>friend_name;
+cout<<"Dear "<<friend_name<<","<<endl;
+cout<<"How are you? Just to let you know I feel ok for now but I miss you a lot."<<endl;
+
+char friend_sex;
+cout<<"Please enter your friend's sex."<<endl;
+cout<<"Type 'm' if he is male, and 'f' if she is female."<<endl;
+cin>>friend_sex;
+
+if (friend_sex=='m'){
+cout<<"If you see "<<friend_name<<" please ask him to call me."<<endl;
+}else if(friend_sex=='f'){
+cout<<"If you see "<<friend_name<<" please ask her to call me."<<endl;
+}
+int age;
+cout<<"Please enter your friend's age"<<endl;
+cin>>age;
+
+if(age <=0 || age >110){
+simple_error("You're kidding!");
+keep_window_open();
+    exit(1);
+}
+
+cout<<"I hear you just had a birthday and you are "<<age<<" years old."<<endl;
+if(age<12){
+cout<<"Next year you will be "<<age+1<<endl;
+}else if(age==17){
+cout<<"Next year you will be able to vote."<<endl;
+}else if(age>70)
+cout<<"I hope you are enjoying retirement."<<endl;
+cout<<"Yours sincerely,"<<endl;
+cout<<"\n";
+cout<<"\n";
+cout<<"Marcell Beres"<<endl;
+
+return 0;
+}
