@@ -1,0 +1,38 @@
+#include "std_lib_facilities.h"
+
+void sayhi(string name){
+cout<<"Hello "<<name<<"!"<<endl;
+cout<<"Lets play a game, i'm thinking of a number and u have to guess it!"<<endl;
+cout<<"So lets choose a number from 0 to 30!"<<endl;
+}
+
+int main(){
+	sayhi("Marcell");
+
+int a,b,maxnum;
+int gcount=0;
+maxnum=4;
+
+srand (time(0));
+a= rand()%30;
+
+while(b!=a){
+if(gcount==maxnum){
+cout<<"You lost!"<<endl;
+return 0;
+}else if(gcount!=maxnum){
+cin>>b;
+gcount++;
+if(b==a){
+cout<<"Congrats! You won!"<<endl;
+}else if(b<a){
+cout<<"Higher."<<endl;
+cout<<"Go for it you still have attempts left!"<<endl;
+}else if(b>a){
+cout<<"Lower."<<endl;
+cout<<"Go for it you still have attempts left!"<<endl;
+}
+}
+}
+return 0;
+}
