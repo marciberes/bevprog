@@ -13,10 +13,9 @@ int main()
 {
 cout<<"You can choose from the following operators: +, -, * or /"<<endl;
 cout<<"If you want to exit, just type "" x ""as an operator!"<<endl;
-	cout<<"Type in the first number"<<endl;
-cin>>num1;
-	cout<<"Type in the chosen operator"<<endl;
-cin>>muvelet;
+cout<<"Type in the first number, followed by an operator and the second number."<<endl;
+cout<<"Example: 3+3"<<endl;
+cin>>num1>>muvelet>>num2;
 switch(muvelet){
 case 'x':
 		kiir(v);
@@ -24,8 +23,6 @@ case 'x':
 		break;
 return 0;
 }
-	cout<<"Type in the second number"<<endl;
-cin>>num2;
 	switch (muvelet){				//2 szám + operátor bekérése
 	case '+':
 		prod=num1+num2;	
@@ -51,6 +48,7 @@ cin>>num2;
 		cout<<"The value is: "<<prod<<endl;
 		v.push_back(prod);
 		break;
+	
 	default:
 	cout<<"Unknown operator"<<endl;
 	break;
