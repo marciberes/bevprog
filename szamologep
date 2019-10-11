@@ -54,8 +54,8 @@ return 0;
 	break;
 }
 while (cin){
-	cout<<"Type in the chosen operator"<<endl;
-cin>>muvelet;
+	cout<<"Type in the next operation."<<endl;
+cin>>muvelet>>num3;						//3. szám,operátor bekérése
 switch(muvelet){
 case 'x':
 		kiir(v);
@@ -64,9 +64,7 @@ case 'x':
 		exit (1);
 		break;
 }
-	cout<<"Type in a new number"<<endl;
-cin>>num3;
-	switch(muvelet){					//3. szám,operátor bekérése
+	switch(muvelet){					
 	case '+':
 		prod=prod+num3;	
 		cout<<"The new value is: "<<prod<<endl;
