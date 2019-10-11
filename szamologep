@@ -54,7 +54,7 @@ return 0;
 }
 while (cin){
 	cout<<"Type in the next operation."<<endl;
-cin>>muvelet>>num3;						//3. szám,operátor bekérése
+cout<<prod;cin>>muvelet>>num3;						//3. szám,operátor bekérése
 switch(muvelet){
 case 'x':
 		kiir(v);
