@@ -50,6 +50,7 @@ return 0;
 	
 	default:
 	cout<<"Unknown operator"<<endl;
+	return 0;
 	break;
 }
 while (cin){
