@@ -21,8 +21,8 @@ switch(muvelet){
 case 'x':
 		kiir(v);
 		for (int i=0;i<v.size();i++)		//Exit parancs
-		exit (1);
 		break;
+return 0;
 }
 	cout<<"Type in the second number"<<endl;
 cin>>num2;
@@ -50,12 +50,6 @@ cin>>num2;
 		prod=num1/num2;
 		cout<<"The value is: "<<prod<<endl;
 		v.push_back(prod);
-		break;
-	case 'x':
-		kiir(v);
-		for (int i=0;i<v.size();i++)
-		cout<<"Latest results= "<<v[i]<<"\n";
-		exit (1);
 		break;
 	default:
 	cout<<"Unknown operator"<<endl;
