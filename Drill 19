@@ -1,0 +1,87 @@
+  
+#include "std_lib_facilities.h"
+
+template <typename T>
+struct S {
+    private:
+        T val;
+    public:
+        S(T val) {
+            this -> val = val;
+        }
+    T get();
+    T set(T x);
+    T get() const;
+    void op(const T& x);
+        T read_val(T& v);
+    
+};
+
+template <typename T>
+T S<T>::set(T x) {
+    val = x;
+}
+
+template <typename T>
+T S<T>::get() {
+    return val;
+}
+
+template <typename T>
+T S<T>::get() const {
+    return val;
+}
+
+template <typename T>
+void S<T>::op(const T& x) {
+    val = x;
+}
+
+template <typename T>
+    read_val(T& v) {
+    cin >> v;
+}
+
+int main() {
+    cout << '\n';
+    
+    S<int> s1(1);
+    S<char> s2('a');
+    S<double> s3(3.38);
+    S<string> s4("Random");
+    //S<vector<int>> s5(vector<int>{1,2,3});
+    
+    cout << s1.get() << '\n';
+    cout << s2.get() << '\n';
+    cout << s3.get() << '\n';
+    cout << s4.get() << '\n';
+    //cout << s5.get() << '\n';
+    
+    cout << "Write an integer!" << '\n';
+    int itg;
+    read_val(itg);
+    s1.set(itg);
+    cout << s1.get() << '\n';
+    
+    cout << "Write a character!" << '\n';
+    char chr;
+    read_val(chr);
+    s2.set(chr);
+    cout << s2.get() << '\n';
+    
+    cout << "Write a double!" << '\n';
+    double dbl;
+    read_val(dbl);
+    s3.set(dbl);
+    cout << s3.get() << '\n';
+    
+    cout << "Write a string!" << '\n';
+    string str;
+    read_val(str);
+    s4.set(str);
+    cout << s4.get() << '\n';
+    
+    cout << '\n';
+    
+    return 0;
+}
